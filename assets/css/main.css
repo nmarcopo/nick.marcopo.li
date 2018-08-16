@@ -814,6 +814,15 @@
 		margin-bottom: 2em;
 	}
 
+	/* link decorations */
+	a:link, a:visited {
+		text-decoration: none;
+	}
+
+	a:hover, a:active {
+		text-decoration: underline;
+	}
+
 /* Table */
 
 	table {
@@ -1308,6 +1317,7 @@
 
 					#nav a:hover {
 						opacity: 1.0;
+						text-decoration: none;
 					}
 
 						#nav a:hover span {
@@ -1316,6 +1326,7 @@
 
 					#nav a.active {
 						opacity: 1.0;
+						text-decoration: none;
 					}
 
 						#nav a.active:after {
@@ -1571,6 +1582,7 @@
 
 					#nav a:hover {
 						opacity: 1.0;
+						text-decoration: none;
 					}
 
 						#nav a:hover span {
@@ -1579,6 +1591,7 @@
 
 					#nav a.active {
 						opacity: 1.0;
+						text-decoration: none;
 					}
 
 						#nav a.active:after {
