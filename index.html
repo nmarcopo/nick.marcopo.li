@@ -18,7 +18,8 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	<script src="galleria/galleria-1.5.7.min.js"></script>
+	<!-- <script src="galleria/galleria-1.5.7.min.js"></script> -->
+	<script src="assets/js/lazy.js"></script>
 </head>
 
 <body>
@@ -29,9 +30,9 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<a href="#me" class="icon fa-home active"><span>Home</span></a>
-			<a href="#work" class="icon fa-folder"><span>Work</span></a>
+			<a href="#work" class="icon fa-folder" onclick="showWork();"><span>Work</span></a>
 			<a href="#photography" class="icon fa-camera-retro"><span>Photography</span></a>
-			<a href="#contact" class="icon fa-envelope"><span>Contact</span></a>
+			<a href="#contact" class="icon fa-envelope" onclick="showForm();"><span>Contact</span></a>
 			<a href="https://git.io/nmarcopo" class="icon fa-github"><span>GitHub</span></a>
 		</nav>
 
@@ -138,8 +139,8 @@
 						<h3>
 							<a href="https://github.com/nmarcopo/bombDefusal">MATLAB Bomb Defusal Simulator</a>
 						</h3>
-						<div class="image.centered">
-							<iframe src="https://drive.google.com/file/d/0Bw-yvApdS7mzdGxQdWlZNzFJY0E/preview" width="100%" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+						<div class="image.centered" id="defusalVideo">
+							<iframe src="" lsrc="https://drive.google.com/file/d/0Bw-yvApdS7mzdGxQdWlZNzFJY0E/preview" width="100%" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" class="workResource"></iframe>
 						</div>
 						<p align="justify"><br>As a final project for our Introduction to Engineering course, several of my friends and I created a bomb defusal simulator in MATLAB which resembles the popular PC game <a href="http://www.keeptalkinggame.com" target="_blank">"Keep Talking and Nobody Explodes."</a>							Our group implemented an interactive GUI which allows users to defuse a bomb by following a silly instruction manual. We included a “simulator” GUI, which allows users to compare three different solving algorithms - Randomization, Brute Force,
 							and Rule Abider - to see the advantages and disadvantages of each. The video above is our final project video explaining the Simulator in more detail, which I recommend watching before downloading the project. You can download this project
@@ -221,10 +222,10 @@
 
 			<!-- Contact -->
 			<article id="contact" class="panel">
-				<form action="#" method="post">
-					<iframe src="https://docs.google.com/forms/u/1/d/e/1FAIpQLSdEmj2NkIKR9CaZYfr1UB2g_92s1ds0A99B4kxZP3mrr1cphQ/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">
+				<form action="#" method="post" id="docsContactForm">
+					<!-- <iframe src="https://docs.google.com/forms/u/1/d/e/1FAIpQLSdEmj2NkIKR9CaZYfr1UB2g_92s1ds0A99B4kxZP3mrr1cphQ/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">
 									Loading...
-					</iframe>
+					</iframe> -->
 				</form>
 			</article>
 
