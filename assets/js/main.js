@@ -223,7 +223,6 @@
 
 	// Short delay to resize page in the case that lazy-loading messes up page size.
 	setTimeout(() => {
-		console.log("timer off");
 		$window.trigger('resize');
 	}, 1000);
 
