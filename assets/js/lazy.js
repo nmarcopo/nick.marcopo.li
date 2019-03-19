@@ -7,7 +7,10 @@ window.onload = function(){
             showForm();
             break;
         case "#work":
-            showWork();
+            showPhotos("workResource");
+            break;
+        case "#photography":
+            showPhotos("photoResource");
             break;
     }
 }
@@ -26,8 +29,8 @@ function showForm() {
 };
 
 // Load work videos and pictures
-function showWork() {
-    resources = document.getElementsByClassName("workResource");
+function showPhotos(className) {
+    resources = document.getElementsByClassName(className);
     for(let element of resources){
         // All resources to be loaded lazily have src replaced with lsrc
         realSrc = element.getAttribute("lsrc");
