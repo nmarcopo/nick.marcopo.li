@@ -221,9 +221,18 @@
 
 	});
 
-	// Short delay to resize page in the case that lazy-loading messes up page size.
-	setTimeout(() => {
-		$window.trigger('resize');
-	}, 1000);
+	// Resize page whenever a new image has loaded - prevents lazy-loading formatting issues
+	var imagesArray = [];
+	var workResources = document.getElementsByClassName("workResource");
+	var photoResources = document.getElementsByClassName("photoResource");
+
+	imagesArray.push.apply(imagesArray, workResources);
+	imagesArray.push.apply(imagesArray, photoResources);
+
+	imagesArray.forEach(element => {
+		element.onload = function() {
+			$window.trigger('resize');
+        }
+	});
 
 })(jQuery);
